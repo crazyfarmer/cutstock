@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.github.cutstock.ui.editors.CallEditor"
+            id="com.github.cutstock.callEditor"
+            name="call editor">
+         <commandParameter
+               id="com.github.cutstock.editor.callEditorParam"
+               name="Call  Editor Parameter"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            id="com.github.cutstock.actions.newRule"
+            name="new Rule">
+      </command>
+      <command
+            id="com.github.cutstock.actions.deleteData"
+            name="delete data">
+      </command>
+   </extension>
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.github.cutstock.rcp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.github.cutstock.rcp.CutStockPerspective"
+            id="com.github.cutstock.perspective"
+            name="下料优化软件">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="com.github.cutstock.ui.views.NavigationView"
+            id="com.github.cutstock.navigationView"
+            name="导航"
+            restorable="true">
+      </view>
+      <view
+            class="com.github.cutstock.ui.views.dataset.ViewTransRuleTable"
+            id="com.github.cutstock.ui.views.dataset.viewTransRuleTable"
+            name="断桥规则"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.github.cutstock.ui.editors.ProfileTransEditor"
+            default="false"
+            icon="icons/16/cutting_collection_16.png"
+            id="com.github.cutstock.editors.profileEditor"
+            name="零单型材优化">
+      </editor>
+      <editor
+            class="com.github.cutstock.ui.editors.TransRuleEditor"
+            default="false"
+            id="com.github.cutstock.ui.editors.transruleEditor"
+            name="断桥转换规则">
+      </editor>
+   </extension>
+   <!--<extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.github.cutstock.perspective">
+         <view
+               closeable="false"
+               id="com.github.cutstock.navigationView"
+               minimized="false"
+               moveable="false"
+               ratio="0.2"
+               relationship="left"
+               visible="true">
+         </view>
+         <view
+               id="com.github.cutstock.views.dataset.viewTransRuleTable"
+               minimized="false"
+               ratio="0.75"
+               relationship="bottom"
+               standalone="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+-->
+<extension
+      point="org.eclipse.ui.startup">
+   <startup
+         class="com.github.cutstock.rcp.Startup"></startup>
+</extension>
+<extension
+      id="cutproduct"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="com.github.cutstock.application"
+         name="cutstock optimazation">
+      <property
+            name="appName"
+            value="cutstock optimazation">
+      </property>
+      <property
+            name="startupForegroundColor"
+            value="000000">
+      </property>
+      <property
+            name="startupMessageRect"
+            value="7,252,445,20">
+      </property>
+      <property
+            name="startupProgressRect"
+            value="5,275,445,15">
+      </property>
+      <property
+            name="preferenceCustomization"
+            value="plugin_customization.ini">
+      </property>
+   </product>
+</extension>
+</plugin>

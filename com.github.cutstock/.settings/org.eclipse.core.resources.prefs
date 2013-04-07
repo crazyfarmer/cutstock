@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/com/github/cutstock/algorithm/ColPattern.java=UTF-8
+encoding//src/com/github/cutstock/algorithm/messages.properties=UTF-8
+encoding//src/com/github/cutstock/model/ProfileInfo.java=UTF-8
+encoding//src/com/github/cutstock/model/messages.properties=UTF-8
+encoding//src/com/github/cutstock/rcp/messages.properties=ISO-8859-1
+encoding//src/com/github/cutstock/service/messages.properties=UTF-8
+encoding//src/com/github/cutstock/ui/actions/messages_zh_CN.properties=UTF-8
+encoding//src/com/github/cutstock/ui/editors/ProfileTransEditor.java=UTF-8
+encoding//src/com/github/cutstock/ui/editors/actions/messages.properties=ISO-8859-1
+encoding//src/com/github/cutstock/ui/editors/dialogs/messages_zh_CN.properties=UTF-8
+encoding//src/com/github/cutstock/ui/editors/messages.properties=UTF-8
+encoding//src/com/github/cutstock/ui/views/actions/messages.properties=ISO-8859-1
+encoding//src/com/github/cutstock/ui/views/dataset/messages_zh_CN.properties=UTF-8
+encoding//src/com/github/cutstock/ui/views/messages.properties=ISO-8859-1
+encoding//src/com/github/cutstock/ui/views/messages_zh_CN.properties=UTF-8
