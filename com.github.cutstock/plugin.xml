@@ -99,11 +99,6 @@
    </extension>
 -->
 <extension
-      point="org.eclipse.ui.startup">
-   <startup
-         class="com.github.cutstock.rcp.Startup"></startup>
-</extension>
-<extension
       id="cutproduct"
       point="org.eclipse.core.runtime.products">
    <product
